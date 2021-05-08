@@ -1,0 +1,56 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: bot_greet_call
+  - action: utter_greet_response
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+#- story: Basic info
+#  steps:
+#  - intent: tell_name
+#  - action: utter_name
+#  - action: utter_my_name
+#  - intent: my_name
+#    entities:
+#      - name: "John"
+#  - slot_was_set:
+#      - name: "John"
+#  - action: utter_my_number
+#  - intent: my_number
+#    entities:
+#      - number: "0708965214"
+#  - slot_was_set:
+#      - number: "0708965214"
+#  - action: utter_my_region
+#  - intent: my_region
+#    entities:
+#      - region: "Nairobi"
+#  - slot_was_set:
+#      - region: "Nairobi"
+#  - action: utter_thanks

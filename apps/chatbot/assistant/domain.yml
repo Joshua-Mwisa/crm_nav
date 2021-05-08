@@ -1,0 +1,94 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - bot_greet_call
+  - my_region:
+      use_entities:
+        - region
+  - my_name:
+      use_entities:
+        - name
+  - my_number:
+      use_entities:
+        - number
+  - tell_name
+
+entities:
+  - name
+  - number
+  - region
+
+slots:
+  name:
+    type: text
+  number:
+    type: text
+  region:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_greet_response:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "Yes, my name is Liam. How can I be of assistance?"
+
+  utter_name:
+    - text: "My name is Liam"
+
+  utter_ask_name:
+    - text: "What is your name?"
+
+  utter_ask_number:
+    - text: "What is your mobile number?"
+
+  utter_ask_region:
+    - text: "Where are you from?"
+
+  utter_details_thanks:
+    - text: "Thank you for providing the values \n Name: {name}, \n Mobile Number: {number}, \n Region : {region}"
+
+  utter_out_of_scope:
+    - text: Sorry, I didn't get what you said. Please rephrase what you said.
+
+actions:
+  - action_submit
+#  - action_video
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
+    region:
+      - type: from_entity
+        entity: region
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

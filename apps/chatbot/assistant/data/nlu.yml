@@ -1,0 +1,148 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Bye Liam
+    - Thank you for everything Liam
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I'm fine
+    - I'm great
+    - I'm doing fine
+    - I'm good
+    - I'm doing good
+    - I'm well
+    - I'm doing well
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: bot_greet_call
+  examples: |
+    - Hey Liam
+    - Hi Liam
+    - Liam
+
+- intent: tell_name
+  examples: |
+    - What is your name?
+    - Remind me your name?
+    - What was your name again?
+    - What was your name?
+    - Tell me your name?
+
+- intent: my_region
+  examples: |
+    - I am from [Nairobi]{"entity":"region", "value":"Nairobi"}
+    - I'm from [Nairobi]{"entity":"region", "value":"Nairobi"}
+    - I am from [Kisii]{"entity":"region", "value":"Kisumu"}
+    - I'm from [Kisii]{"entity":"region", "value":"Kisumu"}
+    - I am from [Kisumu]{"entity":"region", "value":"Kisumu"}
+    - I'm from [Kisumu]{"entity":"region", "value":"Kisumu"}
+    - I am from [Mombasa]{"entity":"region", "value":"Mombasa"}
+    - I'm from [Mombasa]{"entity":"region", "value":"Mombasa"}
+    - [Nakuru]{"entity":"region", "value":"Nakuru"}
+
+
+- intent: my_name
+  examples: |
+    - My name is [John]{"entity":"name", "value":"John"}
+    - My name is [Kevin]{"entity":"name", "value":"Kevin"}
+    - My name is [Brian]{"entity":"name", "value":"Brian"}
+    - My name is [Yvonne]{"entity":"name", "value":"Yvonne"}
+    - [Stacy]{"entity":"name", "value":"Stacy"}
+    - [Lucy]{"entity":"name", "value":"Lucy"}
+    - [Danis]{"entity":"name", "value":"Danis"} is my name
+
+- intent: my_number
+  examples: |
+    - My number is [0708965214]{"entity":"number"}
+    - My mobile number is [0712214103]{"entity":"number"}
+    - My name is [0741236598]{"entity":"number"}
+    - [0712765987]{"entity":"number"} is my number
+    - [0726354623]{"entity":"number"}
+

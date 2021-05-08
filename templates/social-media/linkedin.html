@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar navbar-light navbar-sm" style="background-color: #00000080;">
+    <!-- Navbar content -->
+
+    <a class="btn btn-light"
+       id="linkedin_tab"
+       style="background-color: #007BB6"
+       href="{% url 'linkedin' %}"
+       role="button">
+        <i class="fa fa-linkedin fa-3x"> </i></a>
+
+    <a class="btn btn-light m-1"
+       style="background-color: #3B5998"
+       href="{% url 'facebook' %}"
+       type="button">
+        <i class="fa fa-facebook-f fa-3x"></i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #55ACEE"
+       href="{% url 'twitter' %}"
+       role="button">
+        <i class="fa fa-twitter fa-3x"></i></a>
+
+    <a class="btn btn-light m-1"
+       style="background: linear-gradient(225deg, #405de6, #5851d8, #833ab4, #c13584, #e1306c, #fd1d1d, #F56040, #F77737, #FCAF45, #FFDC80, #FFFFFF);"
+       href="{% url 'instagram' %}"
+       role="button">
+        <i class="fa fa-instagram fa-3x"> </i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #4dc247"
+       href="{% url 'whatsapp' %}"
+       role="button">
+        <i class="fa fa-whatsapp fa-3x"> </i></a>
+
+    <a class="btn btn-light m-1"
+       style="background-color: #0088cc"
+       href="{% url 'telegram' %}"
+       role="button">
+        <i class="fa fa-telegram fa-3x"></i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #ff0000"
+       href="{% url 'youtube' %}"
+       role="button">
+        <i class="fa fa-youtube fa-3x"> </i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #000000"
+       href="{% url 'tiktok' %}"
+       role="button">
+        <i class="fa fa-star fa-3x"> </i></a>
+
+    <a class="btn btn-light m-1"
+       style="background-color: #fffc00; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+       href="{% url 'snapchat' %}"
+       role="button">
+        <i class="fa fa-snapchat fa-3x"> </i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #a82400"
+       href="{% url 'quora' %}"
+       role="button">
+        <i class="fa fa-quora fa-3x"> </i></a>
+
+    <a class="btn btn-light m-1"
+       style="background-color: #ff4500"
+       href="{% url 'reddit' %}"
+       role="button">
+        <i class="fa fa-reddit fa-3x"> </i></a>
+
+    <a class="btn btn-light"
+       style="background-color: #cb2027"
+       href="{% url 'pinterest' %}"
+       role="button">
+        <i class="fa fa-pinterest fa-3x"> </i></a>
+</nav>
+<br>   <!-- Navbar content -->
+
+<div class="card">
+    <div class="card-header">LinkedIn
+        <div class="card-action">
+            <div class="dropdown">
+                <a href="javascript:void();" class="dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown">
+                    <i class="icon-options"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="javascript:void();">Action</a>
+                    <a class="dropdown-item" href="javascript:void();">Another action</a>
+                    <a class="dropdown-item" href="javascript:void();">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:void();">Separated link</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="style-4">
+        <ul class="menu-4" id="myTab" role="tablist">
+            <li><a href="#personal-profile" data-hover="Personal Profile" data-toggle="tab" role="tab">Personal Profile</a></li>
+            <li><a href="#prospects" data-hover="Prospects" data-toggle="tab" role="tab">Prospects</a></li>
+            <li><a href="#groups" data-hover="Groups" data-toggle="tab" role="tab">Groups</a></li>
+            <li><a href="#business-pages" data-hover="Business Pages" data-toggle="tab" role="tab">Business Pages</a></li>
+            <li><a href="#events" data-hover="Events" data-toggle="tab" role="tab">Events</a></li>
+            <li><a href="#ads-manager" data-hover="Ads Manager" data-toggle="tab" role="tab">Ads Manager</a></li>
+            <li><a href="#courses" data-hover="Courses" data-toggle="tab" role="tab">Courses</a></li>
+            <li><a href="#hashtags" data-hover="Hashtags" data-toggle="tab" role="tab">Hashtags</a></li>
+        </ul>
+    </nav>
+    <div class="tab-content">
+        <div class="tab-pane active" id="personal-profile" role="tabpanel" aria-labelledby="home-tab">Personal Profile content</div>
+        <div class="tab-pane" id="prospects" role="tabpanel" aria-labelledby="profile-tab">Prospects content
+            <br>
+            <form class="search-bar">
+                <input type="text" class="form-control" placeholder="Enter keywords">
+                <a href="javascript:void();"><i class="icon-magnifier"></i></a>
+            </form>
+        </div>
+        <div class="tab-pane" id="groups" role="tabpanel" aria-labelledby="messages-tab">Groups content</div>
+        <div class="tab-pane" id="events" role="tabpanel" aria-labelledby="settings-tab">Events content</div>
+        <div class="tab-pane" id="business-pages" role="tabpanel" aria-labelledby="settings-tab">Business Pages content</div>
+        <div class="tab-pane" id="ads-manager" role="tabpanel" aria-labelledby="settings-tab">Ads manager content</div>
+        <div class="tab-pane" id="courses" role="tabpanel" aria-labelledby="settings-tab">Courses content</div>
+        <div class="tab-pane" id="hashtags" role="tabpanel" aria-labelledby="settings-tab">Hashtag content</div>
+    </div>
+</div>
+
+<script>
+    $('#myTab').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+
+</script>
+
+{% endblock content %}
